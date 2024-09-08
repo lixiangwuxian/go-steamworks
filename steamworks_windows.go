@@ -181,6 +181,13 @@ func (s steamFriends) SetRichPresence(key, value string) bool {
 	return byte(v) != 0
 }
 
+func (s steamFriends) ClearRichPresence() {
+	_, err := theDLL.call(flagAPI_ISteamFriends_ClearRichPresence, uintptr(s))
+	if err != nil {
+		panic(err)
+	}
+}
+
 func SteamInput() ISteamInput {
 	v, err := theDLL.call(flatAPI_SteamInput)
 	if err != nil {

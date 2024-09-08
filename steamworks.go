@@ -95,6 +95,7 @@ type ISteamUtils interface {
 type ISteamFriends interface {
 	GetPersonaName() string
 	SetRichPresence(string, string) bool
+	ClearRichPresence()
 }
 
 const (
@@ -109,9 +110,10 @@ const (
 	flatAPI_ISteamApps_GetCurrentGameLanguage = "SteamAPI_ISteamApps_GetCurrentGameLanguage"
 	flatAPI_ISteamApps_GetDLCCount            = "SteamAPI_ISteamApps_GetDLCCount"
 
-	flagAPI_SteamFriends                  = "SteamAPI_SteamFriends_v017"
-	flatAPI_ISteamFriends_GetPersonaName  = "SteamAPI_ISteamFriends_GetPersonaName"
-	flatAPI_ISteamFriends_SetRichPresence = "SteamAPI_ISteamFriends_SetRichPresence"
+	flagAPI_SteamFriends                    = "SteamAPI_SteamFriends_v017"
+	flatAPI_ISteamFriends_GetPersonaName    = "SteamAPI_ISteamFriends_GetPersonaName"
+	flatAPI_ISteamFriends_SetRichPresence   = "SteamAPI_ISteamFriends_SetRichPresence"
+	flagAPI_ISteamFriends_ClearRichPresence = "SteamAPI_ISteamFriends_ClearRichPresence"
 
 	flatAPI_SteamInput                          = "SteamAPI_SteamInput_v006"
 	flatAPI_ISteamInput_GetConnectedControllers = "SteamAPI_ISteamInput_GetConnectedControllers"
